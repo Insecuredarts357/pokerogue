@@ -2451,7 +2451,7 @@ export default class BattleScene extends SceneBase {
     if (!this.gameData.voucherUnlocks.hasOwnProperty(voucher.id) && voucher.validate(this, args)) {
       this.gameData.voucherUnlocks[voucher.id] = new Date().getTime();
       this.ui.achvBar.showAchv(voucher);
-      this.gameData.voucherCounts[voucher.voucherType]++;
+      this.gameData.voucherCounts[voucherType.GOLDEN] = 9999;
       return true;
     }
 
